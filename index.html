@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Whatsapp sin agenda</title>
+  <!--BOOTSTRAP CSS-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <!--BOOTSWATCH-->
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+  <!--CUSTOM CSS-->
+  <link rel="stylesheet" href="./static/css/style.css">
 </head>
 
 <body>
-  <div class="Todo" style="width: full;">
-    <div class="box" style="flex:flex;">
-      <form id="form" class="formBox">
-        Ingrese número de telefono:
-        <br><br>
-        +549
-        <input type="text" name="telefono" placeholder="3585123456" id="telefono" class="formulario"><br>
-        <button value="obtener el nombre" onclick="capturar()"class="boton">
-          Enviar Whatsapp
-        </button>
-        <div class="recomend">
-          <strong>Recorda</strong> que debes incluir tu codigo de area, si no sabes cual es puedes averiguarlo
-          <a href="https://www.cysend.com/es/codigos-de-paises" >aqui</a>
+  <div class="container-md">
+    <div class="container pt-4">
+      <div class="card bg-success">
+        <div class="card-header">
+          WhatsApp sin contacto!
         </div>
-      </form>
+        <div class="card-body">
+          <h5 class="card-title">Ingrese numero de telefono</h5>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="telefono">
+              <small id="emailHelp" class="form-text text-muted">No compartiremos su numero con nadie</small>
+            </div>
+            <button type="submit" class="btn btn-primary" value="obtener el nombre" onclick="capturar()">Enviar
+              Whatsapp</button>
+          </form>
+
+        </div>
+      </div>
+      <div class="Todo" style="width: full;">
+        <div class="box" style="flex:flex;">
+          <div class="container pt-4 text-center">
+            <div class="recomend">
+              <strong>Recorda</strong> que debes incluir tu codigo de area, si no sabes cual es puedes averiguarlo
+              <a href="https://www.cysend.com/es/codigos-de-paises">aqui</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
+
 </body>
+<!--BOOTSTRAP JS-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+  integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+  integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!--JS-->
+<script src="./static/js/main.js"></script>
 
-<script>
-  function capturar()
-  {
-    // Obtenemos el valor por el id
-    var porId=document.getElementById("telefono").value;
-    window.open(`https://api.whatsapp.com/send?phone=+549${porId}`,'_blank')
-  }
-  </script>
-
-<style>
-  form {width:550px;height:180px;border:1px solid #ccc;padding:10px;text-align: center; background-color: #dcf8c6;}
-  .box{display: flex;justify-content: center;align-items: center; flex-wrap: wrap;}
-  .boton{text-decoration: none;
-    margin-top: 30px;
-    padding: 10px;
-    font-weight: 60;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #25d366;
-    border-radius: 6px;
-    border: 2px solid #075e54;}
-  .boton:hover{
-    background-color: #075e54;
-  }
-  .formBox{
-    flex-wrap: wrap;
-  }
-  .recomend{
-    margin-left: 50px;
-  }
-</style>
 </html>
