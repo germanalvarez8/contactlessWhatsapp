@@ -11,43 +11,66 @@
   <link rel="stylesheet" href="./static/css/bootstrap.min.css">
   <!--CUSTOM CSS-->
   <link rel="stylesheet" href="./static/css/style.css">
+  <!--FONT AWESOME-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
 </head>
 
 <body>
+  <!--Nav-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-2">
+    <ul class="list-group list-group-horizontal-lg">
+      <li class="list-group-item">
+        <h2 class="fab fa-whatsapp"></h2>
+      </li>
+      <li class="list-group-item">
+        <h3>WhatsApp sin contacto</h3>
+      </li>
+    </ul>
+
+  </nav>
+
   <div class="container-md">
     <div class="container pt-5">
-      <div class="card bg-success">
-        <div class="card-header">
-          WhatsApp sin contacto!
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Ingrese numero de telefono</h5>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-control" id="telefono">
-              <small id="emailHelp" class="form-text text-muted">No compartiremos su numero con nadie</small>
-            </div>
-            <button type="submit" class="btn btn-primary" value="obtener el nombre" onclick="capturar()">Enviar
-              Whatsapp</button>
-          </form>
+
+      <div class="container">
+        <div class="input-group">
+
+          <div class="input-group-prepend">
+            <span class="input-group-text">Codigo de area y numero</span>
+          </div>
+
+          <input id="cod-area" type="text" aria-label="First name" class="form-control" placeholder="+54 9">
+          <input id="cod-numero" type="text" aria-label="Last name" class="form-control" placeholder="3585166293">
 
         </div>
       </div>
-      <div class="Todo" style="width: full;">
-        <div class="box" style="flex:flex;">
-          <div class="container pt-4 text-center">
-            <div class="recomend">
-              <strong>Recorda</strong> que debes incluir tu codigo de area, si no sabes cual es puedes averiguarlo
-              <a href="https://www.cysend.com/es/codigos-de-paises">aqui</a>
-            </div>
+
+      <div class="container pt-4">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Mensaje</span>
           </div>
+          <textarea class="form-control" aria-label="With textarea" placeholder="Hola!"></textarea>
         </div>
       </div>
+
+      <div class="container pt-4">
+        <button type="submit" class="btn btn-primary">Enviar WhatsApp</button>
+      </div>
+
+      <div class="container pt-4 text-center">
+        <div class="recomend">
+          <strong>Recorda</strong> que debes incluir tu codigo de area, si no sabes cual es puedes averiguarlo
+          <a href="https://www.cysend.com/es/codigos-de-paises">aqui</a>
+        </div>
+      </div>
+
 
     </div>
   </div>
 
 </body>
+
 <!--BOOTSTRAP JS-->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
