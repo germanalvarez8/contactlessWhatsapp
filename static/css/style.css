@@ -38,6 +38,10 @@
     margin-left: 50px;
 } */
 
-#cod-numero {
-    width: 30rem;
+
+
+#cod-area {
+    max-width: 10%;
 }
+
+
