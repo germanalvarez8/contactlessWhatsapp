@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Whatsapp sin agenda</title>
+</head>
+
+<body>
+  <div class="Todo" style="width: full;">
+    <div class="box" style="flex:flex;">
+      <form id="form" class="formBox">
+        Ingrese número de telefono:
+        <br><br>
+        +549
+        <input type="text" name="telefono" placeholder="3585123456" id="telefono" class="formulario"><br>
+        <button value="obtener el nombre" onclick="capturar()"class="boton">
+          Enviar Whatsapp
+        </button>
+        <div class="recomend">
+          <strong>Recorda</strong> que debes incluir tu codigo de area, si no sabes cual es puedes averiguarlo
+          <a href="https://www.cysend.com/es/codigos-de-paises" >aqui</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+<script>
+  function capturar()
+  {
+    // Obtenemos el valor por el id
+    var porId=document.getElementById("telefono").value;
+    window.open(`https://api.whatsapp.com/send?phone=+549${porId}`,'_blank')
+  }
+  </script>
+
+<style>
+  form {width:550px;height:180px;border:1px solid #ccc;padding:10px;text-align: center; background-color: #dcf8c6;}
+  .box{display: flex;justify-content: center;align-items: center; flex-wrap: wrap;}
+  .boton{text-decoration: none;
+    margin-top: 30px;
+    padding: 10px;
+    font-weight: 60;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #25d366;
+    border-radius: 6px;
+    border: 2px solid #075e54;}
+  .boton:hover{
+    background-color: #075e54;
+  }
+  .formBox{
+    flex-wrap: wrap;
+  }
+  .recomend{
+    margin-left: 50px;
+  }
+</style>
+</html>
