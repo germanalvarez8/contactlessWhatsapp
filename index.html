@@ -19,17 +19,28 @@
   <!--Nav-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark pt-2">
     <ul class="list-group list-group-horizontal-lg">
+      
       <li class="list-group-item">
         <h2 class="fab fa-whatsapp"></h2>
       </li>
+      
       <li class="list-group-item">
         <h3>WhatsApp sin agenda</h3>
       </li>
+    
     </ul>
-
   </nav>
 
   <div class="container-xl">
+  <div 
+    class="alert alert-danger d-none"
+    id="test" 
+    role="alert" 
+  >
+    Datos incorrectos, por favor revise el numero ingresado
+  </div>
+
+  <div class="container-md">
     <div class="container pt-5">
 
       <div class="container" id="input">
@@ -40,9 +51,21 @@
             <span class="input-group-text">Codigo de area y numero</span>
           </div>
 
-          <input id="cod-area" type="text" aria-label="First name" class="form-control" placeholder="+54 9">
-          <input id="cod-numero" type="text" aria-label="Last name" class="form-control" placeholder="3585166293">
+          <input 
+            id="cod-area" 
+            type="text" 
+            aria-label="First name" 
+            class="form-control" 
+            placeholder="+54 9"
+          >
 
+          <input 
+            id="cod-numero" 
+            type="text" 
+            aria-label="Last name" 
+            class="form-control" 
+            placeholder="3585166293"
+          >
         </div>
       </div>
 
@@ -51,12 +74,18 @@
           <div class="input-group-prepend">
             <span class="input-group-text">Mensaje</span>
           </div>
-          <textarea class="form-control" aria-label="With textarea" placeholder="Hola!"></textarea>
+
+          <textarea 
+            class="form-control" 
+            id="messageInput" 
+            aria-label="With textarea" 
+            placeholder="Hola!"
+          ></textarea>
         </div>
       </div>
 
       <div class="container pt-4">
-        <button type="submit" class="btn btn-primary">Enviar WhatsApp</button>
+        <button type="submit" id="sendButton" class="btn btn-primary" onclick="sendMessage()">Enviar WhatsApp</button>
       </div>
 
       <div class="container pt-4 text-center">
@@ -64,14 +93,12 @@
           <strong>Recorda</strong> que debes incluir tu codigo de area, si no sabes cual es puedes averiguarlo
           <a href="https://www.cysend.com/es/codigos-de-paises">aqui</a>
         </div>
-      </div>
-
 
       
 
+      </div>
     </div>
   </div>
-
 </body>
 
 <!--BOOTSTRAP JS-->
