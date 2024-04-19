@@ -16,4 +16,4 @@ jobs:
 
       - name: Deploy code
         run: |
-          ssh -i ${{ secrets.PEM_PASS }} ec2-user@ec2-18-117-241-206.us-east-2.compute.amazonaws.com cd contactlessWhatsapp && git pull origin main
+          ssh -i ${{ secrets.PEM_PASS }} ec2-user@ec2-18-117-241-206.us-east-2.compute.amazonaws.com
